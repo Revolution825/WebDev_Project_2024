@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <link rel="stylesheet" href="../main.css">
+        <title>OIR Banking System</title>
+		<script type="text/javascript" src="../screen1.js" ></script>
+    </head>
+    <body>
+		<!--The start of the menu bar at the top-->
+		<div class="navbar">
+			<!--The list of items that make up the options on the top menu bar-->
+			<ul class="nav-list" style="list-style-type: none">
+				<li><a href="#">Lodgements</a></li>
+				<li><a href="#">Withdrawals</a></li>
+				<!--Dropdown menu for customers-->
+				<li class="dropdown">
+					<a href="#">Customers</a>
+					<div class="dropdown-content">
+						<a class="dropdownItem" href="#">Create</a><br>
+						<a class="dropdownItem" href="#">View/Amend</a><br>
+						<a class="dropdownItem" href="#">Delete</a>
+					</div>
+				</li>
+				<!--Dropdown menu for all accounts, with nested dropdown menus-->
+				<li class="dropdown">
+					<a href="#">Accounts</a>
+					<div class="dropdown-content">
+						<!--The dropdown menu for loan accounts, nested within the accounts dropdown menu-->
+						<div class="nestedLoan">
+							<a class="dropdownItem" href="#">Loan Account</a>
+							<div class="dropdown-content-loan">
+								<a class="dropdownItem" href="#">Create</a><br>
+								<a class="dropdownItem" href="#">View/Amend</a><br>
+								<a class="dropdownItem" href="#">Delete</a>
+							</div>
+						</div><br>
+						<!--The dropdown menu for current accounts, nested within the accounts dropdown menu-->
+						<div class="nestedCurrent">
+							<a class="dropdownItem" href="#">Current Account</a>
+							<div class="dropdown-content-current">
+								<a class="dropdownItem" href="#">Create</a><br>
+								<a class="dropdownItem" href="#">View/Amend</a><br>
+								<a class="dropdownItem" href="#">Delete</a>
+							</div>
+						</div><br>
+						<!--The dropdown menu for deposit accounts, nested within the accounts dropdown menu-->
+						<div class="nestedDeposit">
+							<a class="dropdownItem" href="#">Deposit Account</a>
+							<div class="dropdown-content-deposit">
+								<a class="dropdownItem" href="#">Create</a><br>
+								<a class="dropdownItem" href="#">View/Amend</a><br>
+								<a class="dropdownItem" href="#">Delete</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!--Logo of the bank, which links back to the homepage-->
+				<li><a href="OIR BANK.html"><img src="logo2.png" alt="Brand logo"></a></li>
+				<li class="dropdown">
+					<a href="#">Management Menu</a>
+					<div class="dropdown-content">
+						<!--NOTE: nestedCurrent and dropdown-content-current are used here for the sake of reducing code redundancy. The name isn't fitting, but it works perfectly-->
+						<div class="nestedCurrent">
+							<a class="dropdownItem" href="#">Charge/Calculate Interest</a><br>
+							<div class="dropdown-content-current">
+								<a class="dropdownItem" href="#">Overdrawn Current Accounts</a><br>
+								<a class="dropdownItem" href="#">View/Amend</a><br>
+								<a class="dropdownItem" href="#">Delete</a>
+							</div>
+						</div>
+						<!--NOTE: nestedDeposit and dropdown-content-deposit areused here for the sake of reducing code redundancy. The name isn't fitting, but it works perfectly-->
+						<div class="nestedDeposit">
+							<a class="dropdownItem" href="#">Change Rates</a><br>
+							<div class="dropdown-content-deposit">
+								<a class="dropdownItem" href="#">Deposit Accounts</a><br>
+								<a class="dropdownItem" href="#">Current Accounts</a><br>
+								<a class="dropdownItem" href="#">Loan Accounts</a>
+							</div>
+						<div></div>
+					</div>
+				</li>
+				<li><a href="#">Quotes</a></li>
+				<li class="dropdown">
+					<a href="#">Reports</a>
+					<div class="dropdown-content">
+						<!--NOTE: nestedCurrent and dropdown-content-current are used here for the sake of reducing code redundancy. The name isn't fitting, but it works perfectly-->
+						<div class="nestedCurrent">
+							<a class="dropdownItem" href="#">History</a><br>
+							<div class="dropdown-content-current">
+								<a class="dropdownItem" href="#">Deposit Account History</a><br>
+								<a class="dropdownItem" href="#">Loan Account History</a><br>
+								<a class="dropdownItem" href="#">Current Account History</a>
+							</div>
+						</div>
+						<!--NOTE: nestedDeposit and dropdown-content-deposit areused here for the sake of reducing code redundancy. The name isn't fitting, but it works perfectly-->
+						<div class="nestedDeposit">
+							<a class="dropdownItem" href="#">Reports</a><br>
+							<div class="dropdown-content-deposit">
+								<a class="dropdownItem" href="#">Customer Report</a><br>
+								<a class="dropdownItem" href="#">Current Account Interest Report</a><br>
+								<a class="dropdownItem" href="#">Account Report</a>
+							</div>
+						<div></div>
+					</div>
+				</li>
+				<li><a href="#">Change Password</a></li>
+			</ul>
+		</div>
+		<!--Student Name: Isaiah Andres
+		Student Number: C00286361
+		Date:25/02/2024 -->
+		<!--Form submission box for the user to enter in the customer's details-->     
+        <div class="submissionBox">
+        <fieldset>
+        <form action="screen1.php" method="post">
+            <legend><h1>Customer Information Form</h1></legend>
+            <br>
+            <div class="fname">
+            <label for="name">Customer First Name:</label> <!-- Input box for the first name-->
+            <input type="text" name="fname" id="fnameID"  required autofocus/>
+            </div>
+            <br>
+			<div class="lname">
+			<label for="name">Customer Surname:</label> <!-- Input box for the last name-->
+			<input type="text" name="lname" id="lnameID"  required autofocus/>
+			</div>
+			<br>
+            <div class="address">
+            <label for="address">Customer Address:</label>
+            <input type="text" name="address" id="addressID" required autofocus />  <!-- input box for the address-->
+            </div>
+            <br>
+            <div class="eircode">
+            <label for="eircode">Customer Eircode:</label>
+            <input type="text" name="eircode" id="eircodeID" required placeholder="A12 BC34" pattern="[A-Z0-9]{3} [A-Z0-9]{4}" autofocus/> <!--Text box for customer's eircode-->
+            </div>
+            <br>
+            <div class="DOB">
+            <label for="dateOfBirth">Date Of Birth:</label>
+            <input type="date" name="dob" id="dobID" required autofocus oninput="checkAge()"/> <!--Using type date rather than numbers shows a calendar in which dates can be chosen from age rating?=18 -->
+            </div>
+            <br>
+			<div class="phoneNo">
+			<label for="phoneNo">Customer Phone Number:</label>
+			<input type="tel" name="phoneNo" id="phoneNoID" placeholder="123 123 1234" pattern="[0-9\- \(\) +]{7,}" required autofocus/> <!-- input type tel allows a user to input a telephone number within the required pattern, pattern shou-->
+			</div>
+			<br>
+			<div class="occupation">
+			<label for="occupation">Customer Occupation:</label>
+			<input type="text" name="occupation" id="occupationID" required autofocus/> <!-- input type tel allows a user to input a telephone number within the required pattern is the pattern our own choice?-->
+			</div>
+			<br>
+            <div class="salary">
+			<label for="salary">Customer Salary:</label>
+			<input type="number" name="salary" id="salaryID" min="0" step=".01" autofocus/> <!--Using this rather than numbers shows a calendar in which dates can chosen from -->
+			</div>
+			<br>
+			<div class="email">
+			<label for="email">Customer Email:</label>
+			<input type="email" name="email" id="emailID" required autofocus/> <!--Using this rather than numbers shows a calendar in which dates can chosen from -->
+			</div>
+			<br>
+			<div class="guarantor">
+			<label for="guarantor">Guarantor's Name:</label>
+			<input type="text" name="gname" id="guarantorID" autofocus/> <!--Using this rather than numbers shows a calendar in which dates can chosen from -->
+			</div>
+			<br>
+            <div class="myButton">
+            <input type="submit" value="Send Form" name="submit" onclick="confirmChoices()"/><br><br> <!-- Submit Button-->
+            <input type="reset" value="Clear Form" name="reset"/> <!-- Reset Button-->
+			</div>
+            </fieldset>
+        </div>
+    </form>
+
+		</div>
+    </body>
+</html>
