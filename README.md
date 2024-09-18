@@ -15,6 +15,13 @@ These features are :
 3. Amend/View a Loan Account
 4. Generate account reports
 
+(features developed by Isaiah Andres)
+
+1. Add a Customer
+2. Delete a Customer
+3. Amend Customer Details
+4. Lodgements
+
 Created using HTML, CSS, Javascript, PHP and MySQL
 
 See project manual and other documentation for more info
