@@ -1,0 +1,354 @@
+/*General formatting for the body including font color, margin, background color, and font style*/
+body
+    {
+        margin: 0;
+        background-color: #006600;
+        font-family: 'Times New Roman', Times, serif;
+        color: gold;
+    }
+/*formatting for any images on the page. will only be used for the logo.*/
+img
+    {
+        height: 100px;
+        width: 100px;
+        align-self: center;
+        position: relative;
+        top: -35px;
+    }
+/*Creates a flex box wherein all items are aligned evenly across the box, and centered vertically in the box*/
+.navbar
+    {
+        display:flex;
+        background-color: #004400;
+        justify-content: center;
+        flex-direction: row;
+        min-height: 50px;
+        max-height: 120px;
+        min-width:fit-content;
+        align-items: center;
+    }
+	/*Applies styling to the navigation bar's list*/
+.nav-list
+	{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        min-height: 50px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+	}
+/*Applies some formatting to the list items, which make up the options on the menu bar*/
+li
+    {
+        display: block;
+        position: relative;
+        top: 35px;
+        padding-right: 6px;
+    }
+/*Alters how links appear in text, when they have been visited, when they are hovered, and when they are being clicked*/
+a:link
+    {
+        color:white;
+        text-decoration: none;
+    }
+
+a:visited
+    {
+        color:white;
+        text-decoration: none;
+    }
+
+a:hover
+    {
+        color:gold;
+        text-decoration: none;
+    }
+
+a:active
+    {
+        color:goldenrod;
+        text-decoration: none;
+    }
+/*Adds seperate colors for links in the dropdown menus*/
+a.dropdownItem:link
+    {
+        color:#001100;
+        text-decoration: none;
+    }
+
+a.dropdownItem:visited
+    {
+        color:#001100;
+        text-decoration: none;
+    }
+
+a.dropdownItem:hover
+    {
+        color:#001100;
+        text-decoration: none;
+    }
+
+a.dropdownItem:active
+    {
+        color:#001100;
+        text-decoration: none;
+    }
+/*Basic required class for the divs that contain dropdown menus*/
+.dropdown 
+    {
+        position: relative;
+        display: inline-block;
+    }
+/*Formatting for the dropdown menus*/
+.dropdown-content 
+    {
+        display: none;
+        position: absolute;
+        background-color: goldenrod;
+        min-width: 160px;
+        border: 3px solid rgb(152, 117, 28);
+        padding: 5px;
+        z-index: 1;
+    }
+/*Individual names are needed for all dropdown menus, so that hovering one menu does not display them all*/
+.dropdown-content-loan
+    {
+        display: none;
+        position: absolute;
+        background-color: goldenrod;
+        min-width: 160px;
+        border: 3px solid rgb(152, 117, 28);
+        padding: 5px;
+        z-index: 2;
+    }
+.dropdown-content-current
+    {
+        display: none;
+        position: absolute;
+        background-color: goldenrod;
+        min-width: 160px;
+        border: 3px solid rgb(152, 117, 28);
+        padding: 5px;
+        z-index: 2;
+    }
+.dropdown-content-deposit
+    {
+        display: none;
+        position: absolute;
+        background-color: goldenrod;
+        min-width: 160px;
+        border: 3px solid rgb(152, 117, 28);
+        padding: 5px;
+        z-index: 2;
+    }
+/*As above, the individual dropdown menus need their own names for classes*/
+.nestedLoan
+    {
+        position: relative;
+        display: inline-block;
+    }
+.nestedCurrent
+    {
+        position: relative;
+        display: inline-block;
+    }
+.nestedDeposit
+    {
+        position: relative;
+        display: inline-block;
+    }
+/* Show the dropdown menu on hover, for all individual dropdowns */
+.dropdown:hover .dropdown-content 
+    {
+        display: block;
+    }
+.nestedLoan:hover .dropdown-content-loan
+    {
+        display: block;
+    }
+.nestedCurrent:hover .dropdown-content-current
+    {
+        display: block;
+    }
+.nestedDeposit:hover .dropdown-content-deposit
+    {
+        display: block;
+    }
+/*Styling for the boxes that appear in the page*/
+.subjectbox
+    {
+		display: inline-block;
+        vertical-align: top;
+        background-color: #009900;
+        padding: 10px;
+        color: #FFFFFF;
+        width: fit-content;
+        margin: 50px;
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(white, goldenrod) 30;
+    }
+/*Styling for the text that will appear in the subject boxes*/
+p.subjectboxtext
+    {
+        font-size: 20px;
+    }
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styling for the fieldset which holds the form details and stays in line with the rest of the page*/
+.fieldsetCustomer
+    {
+        background-color: #009900; /*Sets the background color to green  */
+        padding: 10px; /*Provides for spacing for the fieldset inside any defined borders*/
+        color: #FFFFFF; /*Makes the text color white */
+        width: fit-content; /*Causes the width of the elements within the fieldset to use all the available space provided*/
+        margin: 50px; /*Provides for spacing for the fieldset outside any defined borders*/
+        border-width: 4px; /*Sets the width of the border to 4 pixels */
+        border-style: solid; /*Sets the style of the border to be a solid line */
+        border-image: linear-gradient(white, goldenrod) 30; /*Sets the border image to a linear gradient with white and gold colors which causes smooth transitions between the two colors as the form moves*/
+    }   
+/*Vertically aligning the fieldset labels, inputs and the button*/
+.fieldsetCustomer label 
+{
+    display: flex;
+    flex-direction: column; /*Vertically aligns objects in the fieldset */
+}
+
+.fieldsetCustomer input
+{
+    display: flex;
+    flex-direction: column;
+    width: fit-content; /*Sets the width of the input boxes to use the available space in the fieldset */
+}
+
+.myButton
+{
+    display: flex;
+    flex-direction: inline-block; /*Allows for the buttons to be set up horizontally rather than vertically */
+    height: 20px; /*Setting a height for the buttons */ 
+}
+ 
+.customerListbox4
+{
+    position: relative;
+    bottom: 470px;
+    left: 200px;
+}
+
+.ReportBox
+{
+	background-color: #009900;
+    padding: 10px;
+    color: #FFFFFF;
+    width: fit-content;
+    margin: auto;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(white, goldenrod) 30;
+}
+
+.depositAccountDetails, .currentAccountDetails, .loanAccountDetails
+{
+    border-style: solid;
+}
+.accountDetailText
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+.inputbox {
+    margin-top: 10px;
+    margin-left: 1%;
+    padding: 10px;
+}
+
+.inputbox label {
+    display: inline-block;
+    width: 120px;
+    margin-right: 10px;
+}
+
+.inputbox input {
+    display: inline-block; /*Sets positioning width and height */
+    width: 150px;
+    height:20px;
+    text-align: left;
+    border-style: solid;
+    border-image: linear-gradient(white, goldenrod) 3;/*colour of borders of input boxes*/
+    background-color: white;
+    color: black;
+}
+
+.inputbox :disabled {
+    background-color: lightgray;
+    color: black;
+}
+
+.myButton2 {
+    margin-top: 20px;
+    padding: 3px;
+    margin-left: 30%;
+}
+
+.myButton3 {
+    width: 120px;
+    height:20px;
+}
+
+.selectbox {
+    width: 150px;
+    height:20px;
+}
+
+td, th {
+    min-width: 150px;
+    text-align: left;
+}
+
+.subjectbox2	/* subject box for reportscreen */
+    {
+		display: inline-block;
+        vertical-align: top;
+        background-color: #009900;
+        padding: 10px;
+        color: #FFFFFF;
+        width: fit-content;
+        margin: 50px;
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(white, goldenrod) 30;
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styling for the placeholder page, which is used for unimplemented screens*/
+.placeholder
+    {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 100px;
+        position: absolute;
+        width: 500px;
+        height: 100px;
+        font-size: xx-large;
+        top: 50%;
+        left: 50%;
+        margin-left: -300px;
+        margin-top: -50px;
+    }
+/*Makes it so that the customer details form is layered downward*/
+form.customerDetails
+    {
+        display:flex;
+        flex-direction: column;
+    }
+table
+	{
+	    table-layout:fixed;
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(white, goldenrod) 30;
+    }
+/*--------------------------------------------------------------------------------------------------------------------------------------*/

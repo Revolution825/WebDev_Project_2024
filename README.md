@@ -22,6 +22,13 @@ These features are :
 3. Amend Customer Details
 4. Lodgements
 
+(features developed by Stuart Rossiter)
+
+1. Add a Current Account
+2. Delete a Current Account
+3. Amend/View a Current Account
+4. Withdraw Cash
+
 Created using HTML, CSS, Javascript, PHP and MySQL
 
 See project manual and other documentation for more info
